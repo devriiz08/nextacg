@@ -70,7 +70,7 @@ const Navbar = (props: Props) => {
         </li>
       </ul>
       {/* CTA ke whatsapp */}
-      <Button className="text-secondary">Hubungi Kami</Button>
+      <Button className="text-neutral-100">Hubungi Kami</Button>
     </nav>
   );
 };
