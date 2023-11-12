@@ -10,7 +10,7 @@ const Navbar = (props: Props) => {
   const page = props.page;
 
   return (
-    <nav className="flex items-center justify-between px-14 bg-[url('/images/hero-img.jpg')]">
+    <nav className="flex items-center justify-between px-14 py-2 bg-black">
       {/* Logo dan title */}
       <div className="flex items-center gap-1">
         <Image
