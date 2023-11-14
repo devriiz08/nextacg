@@ -15,13 +15,13 @@ const Navbar = (props: Props) => {
       <div className="flex items-center gap-1">
         <Image
           src={"/images/logo.png"}
-          alt="pt adiya cahya gemilang"
+          alt="pt adiya cahaya gemilang"
           height={600}
           width={1600}
           className="w-14"
         />
         <h1 className="text-md text-secondary font-bold">
-          PT ADIYA CAHYA GEMILANG
+          PT ADIYA CAHAYA GEMILANG
         </h1>
       </div>
       {/* Navigasi URL */}
@@ -38,16 +38,6 @@ const Navbar = (props: Props) => {
         </li>
         <li>
           <Link
-            href={"/"}
-            className={`font-semibold hover:text-secondary transition-all duration-500 ${
-              page == "galeri" ? "text-secondary" : "text-muted-foreground"
-            }`}
-          >
-            Galeri
-          </Link>
-        </li>
-        <li>
-          <Link
             href={"/tentang-kami"}
             className={`font-semibold hover:text-secondary transition-all duration-500 ${
               page == "tentang-kami"
@@ -60,7 +50,17 @@ const Navbar = (props: Props) => {
         </li>
         <li>
           <Link
-            href={"/"}
+            href={"/galeri"}
+            className={`font-semibold hover:text-secondary transition-all duration-500 ${
+              page == "galeri" ? "text-secondary" : "text-muted-foreground"
+            }`}
+          >
+            Galeri
+          </Link>
+        </li>
+        <li>
+          <Link
+            href={"/#kontak"}
             className={`font-semibold hover:text-secondary transition-all duration-500 ${
               page == "kontak-kami" ? "text-secondary" : "text-muted-foreground"
             }`}
