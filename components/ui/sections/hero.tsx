@@ -3,10 +3,10 @@ import { Button } from "../button";
 const Hero = () => {
   return (
     <section
-      className="bg-[url('/images/hero-img.jpg')] bg-no-repeat bg-cover h-screen flex items-start flex-col justify-center px-14"
+      className="bg-[url('/images/hero-img.jpg')] bg-no-repeat bg-cover h-screen flex items-center lg:items-start flex-col justify-center px-14 bg-center"
       id="hero"
     >
-      <h1 className="antialiased font-bold text-secondary text-4xl max-w-xl">
+      <h1 className="antialiased font-bold text-secondary text-2xl lg:text-4xl max-w-xl">
         Mewujudkan Karya Seni Arsitektur yang Abadi Melalui Inovasi GRC Cetak
         Berkualitas Tinggi
       </h1>
