@@ -11,9 +11,9 @@ const WhyChooseUs = () => {
   }, []);
 
   return (
-    <section id="wcu" className="py-14 px-14 flex items-center justify-center">
-      <div className="flex items-center justify-center gap-5 flex-col max-w-[50%] me-6" data-aos="fade-down">
-        <h1 className="text-4xl font-bold">
+    <section id="wcu" className="py-14 px-14 flex items-center flex-col lg:flex-row justify-center">
+      <div className="flex items-center justify-center gap-2 lg:gap-5 flex-col lg:max-w-[50%] lg:me-6 mb-2 lg:mb-0" data-aos="fade-down">
+        <h1 className="text-2xl lg:text-4xl font-bold">
           Pilih Kami, Bangun Keindahan dan Kekuatan Bersama PT Adiya Cahaya
           Gemilang
         </h1>

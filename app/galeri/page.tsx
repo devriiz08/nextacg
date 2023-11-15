@@ -11,7 +11,7 @@ export default function Galeri() {
       <Header page="galeri" />
       <main>
         <div className="py-10 px-14 w-full">
-          <h1 className="font-bold text-4xl mb-6">Galeri</h1>
+          <h1 className="font-bold text-2xl lg:text-4xl mb-6">Galeri</h1>
           <Separator />
           <div className="mt-8 flex items-center justify-center flex-wrap gap-4">
             <CardGallery />
@@ -22,7 +22,7 @@ export default function Galeri() {
             <CardGallery />
           </div>
           <div className="flex items-center mt-4 justify-center">
-            <Button variant={"ghost"} className="mx-auto">
+            <Button variant={"outline"} className="mx-auto">
               Next
             </Button>
           </div>

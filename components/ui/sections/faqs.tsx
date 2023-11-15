@@ -16,13 +16,13 @@ const Faqs = () => {
   AOS.init()
   }, [])
   return (
-    <section data-aos="fade-up" className="px-14 py-6 flex items-center flex-col w-10/12 mx-auto">
-      <h1 className="text-4xl font-bold text-center max-w-xl">
+    <section data-aos="fade-up" className="px-14 py-6 flex items-center flex-col lg:w-10/12 mx-auto">
+      <h1 className="text-2xl lg:text-4xl font-bold mb-2 lg:mb-0 lg:text-center max-w-xl">
         Jawaban atas pertanyaan kami yang paling sering diajukan
       </h1>
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="item-1">
-          <AccordionTrigger>Apa itu GRC cetak?</AccordionTrigger>
+          <AccordionTrigger className="text-start">Apa itu GRC cetak?</AccordionTrigger>
           <AccordionContent>
             GRC cetak adalah produk inovatif kami yang dibuat dengan
             mencampurkan pasir, semen air, additive, dan serat kaca sebagai
@@ -32,7 +32,7 @@ const Faqs = () => {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
-          <AccordionTrigger>
+          <AccordionTrigger className="text-start">
             Bagaimana GRC cetak membantu desain bangunan?
           </AccordionTrigger>
           <AccordionContent>
@@ -42,8 +42,8 @@ const Faqs = () => {
             bangunan yang memukau dan unik sesuai preferensi.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-4">
-          <AccordionTrigger>
+        <AccordionItem value="item-3">
+          <AccordionTrigger className="text-start">
             Apa keunggulan GRC cetak dibandingkan bahan konvensional?
           </AccordionTrigger>
           <AccordionContent>
@@ -53,8 +53,8 @@ const Faqs = () => {
             tetap terjaga.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-5">
-          <AccordionTrigger>
+        <AccordionItem value="item-4">
+          <AccordionTrigger className="text-start">
             Bagaimana proses pemesanan dan pengiriman produk GRC cetak?
           </AccordionTrigger>
           <AccordionContent>
@@ -63,8 +63,8 @@ const Faqs = () => {
             dapat memberikan informasi rinci terkait biaya dan waktu produksi.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-6">
-          <AccordionTrigger>
+        <AccordionItem value="item-5">
+          <AccordionTrigger className="text-start">
             Apakah produk GRC cetak dapat diaplikasikan baik untuk proyek
             eksterior maupun interior?
           </AccordionTrigger>
@@ -75,8 +75,8 @@ const Faqs = () => {
             proyek eksterior dan interior.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-7">
-          <AccordionTrigger>
+        <AccordionItem value="item-6">
+          <AccordionTrigger className="text-start">
             Apakah PT Adiya Cahya Gemilang menyediakan layanan desain kustom
             untuk GRC cetak?
           </AccordionTrigger>
@@ -87,8 +87,8 @@ const Faqs = () => {
             konsep unik Anda.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-8">
-          <AccordionTrigger>
+        <AccordionItem value="item-7">
+          <AccordionTrigger className="text-start">
             Bagaimana cara pemeliharaan GRC cetak untuk memastikan keawetan
             produk?
           </AccordionTrigger>

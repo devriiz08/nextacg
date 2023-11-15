@@ -2,8 +2,8 @@ import Image from "next/image"
 
 const Vm = () => {
     return (
-        <section className="py-10 px-14 flex">
-        <div className="w-1/2">
+        <section className="py-10 px-14 flex flex-col lg:flex-row gap-4">
+        <div className="lg:w-1/2">
           <h1 className="font-bold text-2xl">
             Visi PT Adiya Cahaya Gemilang
           </h1>
@@ -15,7 +15,7 @@ const Vm = () => {
           </p>
           <Image src={"/images/vm-bg.jpg"} alt="visi misi pt adiya cahaya gemilang" width={1600} height={600} className="" />
         </div>
-        <div className="w-1/2 flex items-start flex-col">
+        <div className="lg:w-1/2 flex items-start flex-col">
           <h1 className="font-bold text-2xl">
             Misi PT Adiya Cahaya Gemilang
           </h1>

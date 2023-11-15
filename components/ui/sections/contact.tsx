@@ -12,13 +12,13 @@ const Contact = () => {
 
   return (
     <section id="kontak" className="py-6 px-14" data-aos="fade-down">
-      <h1 className="text-4xl text-center font-bold">Kontak kami</h1>
+      <h1 className="text-2xl lg:text-4xl text-center font-bold">Kontak kami</h1>
       <p className="text-muted-foreground text-center mt-4 max-w-md mx-auto">
         Hubungi kami untuk informasi lebih lanjut dan layanan pelanggan yang
         responsif.
       </p>
-      <div className="flex items-center justify-center gap-10 py-10">
-        <div className="flex items-center flex-col w-[50%]">
+      <div className="flex items-center flex-col lg:flex-row justify-center gap-10 py-10">
+        <div className="flex items-start lg:items-center flex-col lg:w-[50%]">
           <div className="flex items-center gap-1" data-aos="fade-down">
             <Image
               src={"/images/email.png"}
@@ -35,7 +35,7 @@ const Contact = () => {
               alt="email pt adiya cahaya gemilang"
               width={48}
               height={48}
-              className="w-11"
+              className="w-9 lg:w-11"
             />
             <h1>+6281383533007</h1>
           </div>
@@ -45,7 +45,7 @@ const Contact = () => {
           width="600"
           height="450"
           loading="lazy"
-          className="w-[50%]"
+          className="w-[90%] h-[90%] lg:h-full lg:w-[50%]"
         ></iframe>
       </div>
     </section>

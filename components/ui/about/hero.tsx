@@ -1,7 +1,7 @@
 const Hero = () => {
     return (
-        <div className="w-full flex items-center justify-center flex-col min-h-screen bg-[url('/images/bg.png')] bg-cover bg-no-repeat">
-          <h1 className="text-4xl font-bold text-neutral-900 uppercase">
+        <div className="w-full flex items-center justify-center flex-col min-h-screen bg-gradient-to-b from-primary via-primary to-white">
+          <h1 className="text-2xl text-center lg:text-4xl font-bold text-neutral-900 uppercase">
             Tentang PT Adiya Cahaya Gemilang
           </h1>
           <p className="text-center text-muted-foreground max-w-xl mt-2">

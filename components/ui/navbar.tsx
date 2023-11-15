@@ -23,7 +23,7 @@ const Navbar = (props: Props) => {
 
   return (
     <>
-      <nav className="flex items-center justify-between px-14 py-2 bg-black">
+      <nav className="flex items-center justify-between px-8 lg:px-14 py-2 bg-black">
         {/* Logo dan title */}
         <div className="flex items-center gap-1">
           <Image
@@ -88,7 +88,25 @@ const Navbar = (props: Props) => {
         <Button className="text-neutral-100 font-semibold hidden lg:block">
           Hubungi Kami
         </Button>
-        <Button className="lg:hidden" onClick={handleClick}>
+        {isClick ? (
+               <Button className="lg:hidden" variant={"outline"} onClick={handleClick}>
+               <svg
+                 xmlns="http://www.w3.org/2000/svg"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 strokeWidth={1.5}
+                 stroke="currentColor"
+                 className="w-6 h-6"
+               >
+                 <path
+                   strokeLinecap="round"
+                   strokeLinejoin="round"
+                   d="M6 18L18 6M6 6l12 12"
+                 />
+               </svg>
+             </Button>
+        ) : (
+<Button className="lg:hidden" onClick={handleClick}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -104,54 +122,53 @@ const Navbar = (props: Props) => {
             />
           </svg>
         </Button>
+        )}
+        
       </nav>
+      <div className="relative">
       <div
-        className={`lg:hidden flex justify-between py-10 items-start transition-all duration-500 z-[999] flex-col absolute h-screen w-full bg-black top-0 ${
-          !isClick ? "translate-x-full" : "translate-x-20"
+        className={`lg:hidden flex justify-center gap-10 items-center transition-all duration-500 flex-col z-[999] absolute h-screen w-full bg-black top-0 ${
+          !isClick ? "opacity-0" : "opacity-1"
         }`}
       >
-        <Button className="ms-52" variant={"outline"} onClick={handleClick}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </Button>
         <Link
           href={"/"}
-          className={`font-semibold text-neutral-100 hover:text-primary ms-5 ${
-            page == "beranda" ? "text-primary" : ""
+          className={`font-semibold hover:text-secondary transition-all duration-500 ${
+            page == "beranda"
+              ? "text-secondary"
+              : "text-muted-foreground"
           }`}
         >
           Beranda
         </Link>
         <Link
           href={"/tentang-kami"}
-          className="font-semibold ms-5 text-neutral-100 hover:text-primary"
-        >
+          className={`font-semibold hover:text-secondary transition-all duration-500 ${
+            page == "tentang-kami"
+              ? "text-secondary"
+              : "text-muted-foreground"
+          }`}>
           Tentang Kami
         </Link>
         <Link
           href={"/galeri"}
-          className="font-semibold ms-5 text-neutral-100 hover:text-primary"
-        >
+          className={`font-semibold hover:text-secondary transition-all duration-500 ${
+            page == "galeri"
+              ? "text-secondary"
+              : "text-muted-foreground"
+          }`}>
           Galeri
         </Link>
         <Link
           href={"/#kontak"}
-          className="font-semibold ms-5 text-neutral-100 hover:text-primary"
-        >
+          className={`font-semibold hover:text-secondary transition-all duration-500 ${
+            page == "kontak-kami"
+              ? "text-secondary"
+              : "text-muted-foreground"
+          }`}>
           Kontak
         </Link>
+      </div>
       </div>
     </>
   );

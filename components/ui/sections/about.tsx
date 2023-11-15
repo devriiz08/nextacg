@@ -1,37 +1,38 @@
-"use client";
+"use client"
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 
 const About = () => {
-  useEffect(() => {
-    AOS.init({
-      offset: 200
-    });
-  }, []);
 
+  useEffect(() => {
+   AOS.init({
+  offset: 200
+})
+  }, [])
   return (
     <section
-      className="flex items-center justify-between px-14 gap-10 py-10 bg-black"
+      className="flex items-center justify-between lg:flex-row flex-col px-14 gap-10 py-10 bg-black"
     >
-      <div className="w-1/2">
+      <div className="lg:w-1/2">
         <Image
           alt="tentang pt adiya cahaya gemilang"
           src={"/images/p.png"}
           height={1000}
           width={1000}
-          className="w-[70%]"
+          className="lg:w-[70%]"
           data-aos="fade-down"
         />
       </div>
-      <div className="w-1/2" data-aos="fade-down">
+      <div className="lg:w-1/2" data-aos="fade-down">
         <h2 className="text-neutral-300 uppercase font-bold text-xs">
           tentang kami
         </h2>
-        <h1 className="mt-2 font-semibold text-neutral-100 text-4xl mb-6">
+        <h1 className="mt-2 font-semibold text-neutral-100 text-2xl lg:text-4xl mb-6">
           Kami adalah nama paling terpercaya dalam bidang interior dan exterior
         </h1>
         <p className="text-neutral-300 mb-4">
