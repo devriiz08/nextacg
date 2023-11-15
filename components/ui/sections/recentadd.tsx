@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "../button";
 
 const RecentAdded = () => {
@@ -156,6 +157,7 @@ const RecentAdded = () => {
             </div>
           </div>
         </div>
+        <Link href={"/galeri"}>
         <Button
           data-aos="fade-down"
           className="font-semibold uppercase"
@@ -163,6 +165,7 @@ const RecentAdded = () => {
         >
           Lihat Galeri
         </Button>
+        </Link>
       </div>
     </section>
   );
