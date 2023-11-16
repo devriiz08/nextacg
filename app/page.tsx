@@ -1,3 +1,4 @@
+import CtaWa from "@/components/ui/ctawa";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 import About from "@/components/ui/sections/about";
@@ -18,6 +19,7 @@ export default function Home() {
         <WhyChooseUs />
         <Faqs />
         <Contact />
+        <CtaWa />
       </main>
       <Footer />
     </>

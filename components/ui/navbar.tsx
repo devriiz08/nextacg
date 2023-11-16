@@ -1,49 +1,39 @@
 "use client";
-
-import Link from "next/link";
-import { Button } from "./button";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
+import { Button } from "./button";
 
 interface Props {
   page: string;
 }
 
 const Navbar = (props: Props) => {
-  const [isClick, setIsClick] = useState(false);
   const page = props.page;
-
-  const handleClick = () => {
-    if (!isClick) {
-      setIsClick(true);
-    } else {
-      setIsClick(false);
-    }
-  };
+  const [isClick, setIsClick] = useState<boolean>(false);
 
   return (
-    <>
-      <nav className="flex items-center justify-between px-8 lg:px-14 py-2 bg-black">
-        {/* Logo dan title */}
-        <div className="flex items-center gap-1">
+    <div className="">
+      <nav className="flex items-center bg-black justify-between py-4 px-4 lg:px-8">
+        <div className="flex items-center justify-center gap-2">
           <Image
             src={"/images/logo.png"}
-            alt="pt adiya cahaya gemilang"
-            height={600}
-            width={1600}
-            className="w-14"
+            alt="pt lika wira sakti"
+            height={80}
+            width={80}
+            className="w-8 md:w-10"
           />
-          <h1 className="hidden lg:block text-md text-secondary font-bold">
-            PT ADIYA CAHAYA GEMILANG
+          <h1 className="font-bold text-neutral-100 text-sm lg:text-xl">
+            PT Adiya Cahaya Gemilang
           </h1>
         </div>
-        {/* Navigasi URL */}
-        <ul className="lg:flex items-center hidden justify-center gap-4">
+        <ul className="hidden md:flex items-center gap-4 justify-center font-semibold">
           <li>
             <Link
               href={"/"}
-              className={`font-semibold hover:text-secondary transition-all duration-500 ${
-                page == "beranda" ? "text-secondary" : "text-muted-foreground"
+              className={`hover:text-primary text-muted-foreground hover:underline hover:decoration-2 hover:underline-offset-8 transition-all duration-300 ${
+                page == "beranda" &&
+                "text-primary underline underline-offset-8 decoration-2"
               }`}
             >
               Beranda
@@ -52,10 +42,9 @@ const Navbar = (props: Props) => {
           <li>
             <Link
               href={"/tentang-kami"}
-              className={`font-semibold hover:text-secondary transition-all duration-500 ${
-                page == "tentang-kami"
-                  ? "text-secondary"
-                  : "text-muted-foreground"
+              className={`hover:text-primary hover:underline text-muted-foreground hover:decoration-2 hover:underline-offset-8 transition-all duration-300 ${
+                page == "tentang-kami" &&
+                "text-primary underline underline-offset-8 decoration-2"
               }`}
             >
               Tentang Kami
@@ -64,8 +53,9 @@ const Navbar = (props: Props) => {
           <li>
             <Link
               href={"/galeri"}
-              className={`font-semibold hover:text-secondary transition-all duration-500 ${
-                page == "galeri" ? "text-secondary" : "text-muted-foreground"
+              className={`hover:text-primary text-muted-foreground hover:underline hover:decoration-2 hover:underline-offset-8 transition-all duration-300 ${
+                page == "Galeri" &&
+                "text-primary underline underline-offset-8 decoration-2"
               }`}
             >
               Galeri
@@ -74,46 +64,27 @@ const Navbar = (props: Props) => {
           <li>
             <Link
               href={"/#kontak"}
-              className={`font-semibold hover:text-secondary transition-all duration-500 ${
-                page == "kontak-kami"
-                  ? "text-secondary"
-                  : "text-muted-foreground"
+              className={`hover:text-primary hover:underline hover:decoration-2 text-muted-foreground hover:underline-offset-8 transition-all duration-300 ${
+                page == "kontak" &&
+                "text-primary underline underline-offset-8 decoration-2"
               }`}
             >
               Kontak
             </Link>
           </li>
         </ul>
-        {/* CTA ke whatsapp */}
-        <Button className="text-neutral-100 font-semibold hidden lg:block">
-          Hubungi Kami
-        </Button>
-        {isClick ? (
-               <Button className="lg:hidden" variant={"outline"} onClick={handleClick}>
-               <svg
-                 xmlns="http://www.w3.org/2000/svg"
-                 fill="none"
-                 viewBox="0 0 24 24"
-                 strokeWidth={1.5}
-                 stroke="currentColor"
-                 className="w-6 h-6"
-               >
-                 <path
-                   strokeLinecap="round"
-                   strokeLinejoin="round"
-                   d="M6 18L18 6M6 6l12 12"
-                 />
-               </svg>
-             </Button>
-        ) : (
-<Button className="lg:hidden" onClick={handleClick}>
+        <Button
+          variant={"default"}
+          onClick={() => setIsClick(true)}
+          className="md:hidden block"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6"
+            className="w-6 h-6 text-foreground"
           >
             <path
               strokeLinecap="round"
@@ -122,55 +93,76 @@ const Navbar = (props: Props) => {
             />
           </svg>
         </Button>
-        )}
-        
       </nav>
-      <div className="relative">
       <div
-        className={`lg:hidden flex justify-center gap-10 items-center transition-all duration-500 flex-col z-[999] absolute h-screen w-full bg-black top-0 ${
-          !isClick ? "opacity-0" : "opacity-1"
+        className={`bg-black z-[999] h-screen w-screen px-8 fixed top-0 transition-all duration-500 ${
+          isClick ? "translate-x-[0%]" : "translate-x-[100%]"
         }`}
       >
-        <Link
-          href={"/"}
-          className={`font-semibold hover:text-secondary transition-all duration-500 ${
-            page == "beranda"
-              ? "text-secondary"
-              : "text-muted-foreground"
-          }`}
+        <Button
+          variant={"outline"}
+          className="absolute right-8 top-4"
+          onClick={() => setIsClick(false)}
         >
-          Beranda
-        </Link>
-        <Link
-          href={"/tentang-kami"}
-          className={`font-semibold hover:text-secondary transition-all duration-500 ${
-            page == "tentang-kami"
-              ? "text-secondary"
-              : "text-muted-foreground"
-          }`}>
-          Tentang Kami
-        </Link>
-        <Link
-          href={"/galeri"}
-          className={`font-semibold hover:text-secondary transition-all duration-500 ${
-            page == "galeri"
-              ? "text-secondary"
-              : "text-muted-foreground"
-          }`}>
-          Galeri
-        </Link>
-        <Link
-          href={"/#kontak"}
-          className={`font-semibold hover:text-secondary transition-all duration-500 ${
-            page == "kontak-kami"
-              ? "text-secondary"
-              : "text-muted-foreground"
-          }`}>
-          Kontak
-        </Link>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 text-foreground"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </Button>
+        <ul className="flex justify-evenly h-screen items-center flex-col">
+          <li>
+            <Link
+              href={"/"}
+              className={`font-bold text-muted-foreground transition-all duration-300 text-xl hover:text-primary ${
+                page == "beranda" && "text-primary"
+              }`}
+            >
+              Beranda
+            </Link>
+          </li>
+          <li>
+            <Link
+              href={"/tentang-kami"}
+              className={`font-bold transition-all text-muted-foreground duration-300 text-xl hover:text-primary ${
+                page == "tentang-kami" && "text-primary"
+              }`}
+            >
+              Tentang Kami
+            </Link>
+          </li>
+          <li>
+            <Link
+              href={"/galeri"}
+              className={`font-bold text-muted-foreground transition-all duration-300 text-xl hover:text-primary ${
+                page == "galeri" && "text-primary"
+              }`}
+            >
+              Galeri
+            </Link>
+          </li>
+          <li>
+            <Link
+              href={"/#kontak"}
+              className={`font-bold text-muted-foreground transition-all duration-300 text-xl hover:text-primary ${
+                page == "kontak" && "text-primary"
+              }`}
+            >
+              Kontak
+            </Link>
+          </li>
+        </ul>
       </div>
-      </div>
-    </>
+    </div>
   );
 };
 

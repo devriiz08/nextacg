@@ -20,7 +20,7 @@ const WhyChooseUs = () => {
         <p className="text-muted-foreground">
           Kami bukan sekadar penyedia GRC cetak, tapi mitra kreatif yang
           memahami setiap detail desain Anda. Dengan inovasi terdepan, layanan
-          pelanggan yang unggul, dan komitmen pada kualitas, PT Adiya Cahya
+          pelanggan yang unggul, dan komitmen pada kualitas, PT Adiya Cahaya
           Gemilang adalah pilihan terbaik untuk mengubah setiap proyek
           arsitektur menjadi karya seni yang tak terlupakan.
         </p>
@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
       <ol className="list-decimal ms-5" data-aos="fade-down">
         <ListWcu
           title="Inovasi Tanpa Henti"
-          desciption="PT Adiya Cahya Gemilang terus menerapkan inovasi terbaru dalam produksi GRC cetak, memberikan pelanggan akses ke solusi terkini dan paling efektif dalam desain arsitektur"
+          desciption="PT Adiya Cahaya Gemilang terus menerapkan inovasi terbaru dalam produksi GRC cetak, memberikan pelanggan akses ke solusi terkini dan paling efektif dalam desain arsitektur"
         />
         <ListWcu
           title="Kualitas Tak Terkalahkan"
@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
         />
         <ListWcu
           title="Reputasi Yang Terpercaya"
-          desciption="PT Adiya Cahya Gemilang membangun reputasi sebagai penyedia terkemuka dalam industri GRC cetak, dengan sejarah pencapaian dan portofolio proyek yang menunjukkan keunggulan dan keandalan kami."
+          desciption="PT Adiya Cahaya Gemilang membangun reputasi sebagai penyedia terkemuka dalam industri GRC cetak, dengan sejarah pencapaian dan portofolio proyek yang menunjukkan keunggulan dan keandalan kami."
         />
         <ListWcu
           title="Hasil yang Artistik Dan Memukau"

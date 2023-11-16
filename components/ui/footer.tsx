@@ -16,7 +16,7 @@ const Footer = () => {
                 height={600}
                 width={1600}
               />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap text-neutral-100">
+              <span className="self-center text-xl lg:text-2xl font-semibold whitespace-nowrap text-neutral-100">
                 PT Adiya Cahaya Gemilang
               </span>
             </Link>
